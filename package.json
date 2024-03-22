@@ -1,0 +1,22 @@
+{
+  "name": "projeto-nsa-2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "server": "tsx watch ./server/index.ts",
+    "migrate": "tsx ./server/db/migrations/admin-table.ts",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sqlite3": "^5.1.7",
+    "tsx": "^4.7.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "fastify": "^4.26.2"
+  }
+}
