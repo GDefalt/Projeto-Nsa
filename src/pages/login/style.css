@@ -1,109 +1,155 @@
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between; 
+    align-items: center; 
     height: 100vh;
     margin: 0;
     font-family: "Roboto", sans-serif;
-    background-color: rgba(230, 230, 230, 0.5);
+    background: #041643;
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #FFFFFF;
+    background-image: url('image.png');
+    background-size: cover; 
+    background-position: center; 
+    width: 50%; 
+    height: 100vh; 
+}
+
+.login-form > h1,
+.login-form > p { 
+    margin-top: 0; 
+    margin-bottom: 10px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.login-form > h1 {
+    font-size: 4rem;
+    white-space: nowrap; 
+}
+
+.login-form > p {
+    font-size: 2rem;
 }
 
 form {
-    text-align: center;
-    flex-direction: column;
-    display: flex;
-    max-widht: 50vw;
-}
-
-
-
-form > fieldset {
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+    width: 26.9375rem;
+    height: 22.375rem;
+    margin: 0 auto; 
     background-color: white;
-}
-
-form > fieldset > h1{
-    margin-bottom: 0.5rem;  
-    text-transform: uppercase;
-}
-
-.input-group {
-    padding: 0.5rem;
-}
-
-.select-group{
-    padding: 1rem;
-}
-
-
-#new-password {
-    margin-top: 1rem; 
-   
-}
-
-#new-password > a:hover{
-    color: rgba(0, 123, 255, 0.5);
-}
-
-button {
-    padding: 0.5rem;
-    border-radius: 0.4rem;
-    border: 0.1rem solid black;
-    width: 30%;
-    background: gray;
-    color: white;
-    font-size: 1rem;
-   
-    cursor: pointer;
-}
-
-button:hover{
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    outline: none;
-    
-}
-
-
-form input[type="text"],
-form input[type="password"],
-form select {
-    padding: 0.2rem;
-    border: 0.1rem solid #ccc;
-    border-radius: 0.5rem;
-    font-size: 1rem;
- 
-}
-
-form input[type="text"]:focus,
-form input[type="password"]:focus,
-form select:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-.input-group {
-    display: flex;
+    border-radius: 1rem;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    display: flex;
+}
+
+.input-group:nth-child(1) {
+    width: 22.344rem;
+    height: 3.89125rem;
+}
+
+.input-group:nth-child(2) {
+    width: 22.344rem;
+    height: 3.89125rem;
+}
+
+.input-group > input {
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 0.4rem;
+}
+
+.input-group,
+.select-group {
     margin-bottom: 1rem;
+    padding: 1rem;
+    
+
 }
 
-.input-group label {
-    width: 5rem; 
-    text-align: right;
-    margin-right: 0.5rem; 
+.select-group label {
+    margin-left: 1rem; 
+    white-space: nowrap; 
 }
 
-.input-group input[type="text"],
-.input-group input[type="password"]{
- 
-    padding: 0.2rem;
-    border: 0.1rem solid #ccc;
-    border-radius: 0.5rem;
-    font-size: 1rem; 
+.select-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
 
+.select-group > select {
+    width: 40%;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.new-password-btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.new-password-btn > button {
+    width: 7.901875rem;
+    height: 2.198125rem;
+    background-color: #1352F1;
+    border: 0.1rem solid white;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    color: white;
+}
+
+.new-password-btn > a {
+    text-decoration: none;
+    color: #4E4E4E;
+}
+
+.new-password-btn > strong {
+    color: black;
+}
+
+@media (max-width: 720px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        background-image: url('image.png');
+        background-size: cover; 
+        background-position: center; 
+    }
+
+    .login-form {
+        width: 100%; 
+        background-image: none;
+    }
 
 
+    .login-form {
+        height: 50vh; 
+        margin-bottom: 20px; 
+    }
+
+    form {
+        height: 50vh; 
+        min-width: 80%;
+        max-width: 100%; 
+
+    }
+
+    .login-form > h1 {
+        font-size: 3rem;
+    }
+
+    .login-form > p {
+        font-size: 1rem;
+    }
+}

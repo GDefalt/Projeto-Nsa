@@ -11,20 +11,22 @@
   <title>NSA - Online</title>
 </head>
 <body>
+
+  <div class="login-form">
+    <h1>NSA ONLINE</h1>
+    <p>Entre na sua conta</p>
+  </div>
+
+
     <form>
-       
-      
-        <fieldset>
-
-            <h1>Login</h1>
-
+    
           <div class="input-group">
             <label for="rm">RM:</label>
-            <input type="text" id="rm" name="rm">
+            <input type="text" id="rm" name="rm" placeholder="Digite seu RM">
           </div>
             <div class="input-group">
             <label for="password">Senha:</label>
-            <input type="password" id="password" name="password">
+            <input type="password" id="password" name="password" placeholder="Digite sua Senha">
         </div>
           <div class="select-group">
             <label for="role">Escolha o tipo de acesso:</label>
@@ -34,14 +36,15 @@
               <option value="admin">Administrador</option>
             </select>
           </div>
-        
-          <button type="submit">Entrar</button>
 
-          <div id="new-password">
-            <a href="#">Solicitar Nova Senha</a>
+
+
+          <div class="new-password-btn">
+          <a href="#">Solicitar Nova <strong>Senha</strong></a>
+          <button type="submit">Entrar</button>
           </div>
-        </fieldset>
+    
       </form>
-      
+
 </body>
 </html>
